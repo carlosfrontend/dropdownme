@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  gap: 1em;
+}
+.parentContainer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 200px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.parentItem {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.itemsContainer {
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 0;
+  transform: rotateX(-180deg);
+  bottom:0;
+  transition: transform 200ms ease-in 0s;
+  position: relative;
+}
+
+.dummy-item-container {
+  width: 200px;
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.dummy-item {
+  width: 30px;
+  height: 2vh;
+  border-left: 2px solid #090a0a38;
+  border-right: 2px solid #090a0a38;
+  border-radius: 2px;
+}
+
+.item:not(.dummy-item) {
+  font-size: 0.95rem;
+  width: 200px;
+  height: 4vh;
+  border: 2px solid #090a0a38;
+  padding-left: 1em;
+  display: flex;
+  align-items: center;
+  font-weight: 200;
+  color: #090a0ac2;
+  cursor: pointer;
+  margin-top: 0.5em;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transform: skewX(10deg);
+  font-weight: 200;
+}
+
+.itemsContainer > :nth-child(2) {
+  margin-top: 0;
+}
+
+.itemsContainer.visible {
+  display: flex;
+  opacity: 1;
+  transform: rotateX(0);
+}
+
+.change-border-bottom {
+  animation: animated-border 200ms ease-in-out 300ms forwards;
+}
+
+@keyframes animated-border {
+  0% {
+    border-bottom: 0px solid #090a0a38;
+  }
+  25% {
+    border-bottom: 2px solid #090a0a38;
+  }
+  50% {
+    border-bottom: 3px solid #090a0a38;
+  }
+  100% {
+    border-bottom: 5px solid #090a0a38;
+  }
+}
+
+.item.animated {
+  transform: skewX(-10deg);
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: 800;
+}
