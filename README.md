@@ -86,6 +86,10 @@ This package was developed as an exercise for [The Odin Project](https://www.the
 
 :white_check_mark: [Assigments](https://www.theodinproject.com/lessons/node-path-javascript-dynamic-user-interface-interactions) :blue_book:
 
+:white_check_mark: [Live Preview](https://carlosfrontend.github.io/dropdown-menu-odin-project/) :computer:
+
+ Happy Coding!! :coffee: :rocket:
+
 Feel free to change the styles as you like.
 
 Happy Coding!! :coffee: :rocket:
